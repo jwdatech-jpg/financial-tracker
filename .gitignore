@@ -1,0 +1,74 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# Dependencies
+node_modules/
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+financial_tracker.db
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+npm-error.log*
+pip-log.txt
+pip-delete-this-directory.txt
+lerna-debug.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+.vercel/
+
+# Misc
+.cache/
+.python-version
+.eslintcache
+.node_repl_history
+*.tgz
+*.tar.gz
+.npm
+.yarn
+coverage/
+.nyc_output/
+
+# OS
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDE - VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Vercel
+.vercel/
+.vercelignore
