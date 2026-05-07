@@ -4,9 +4,15 @@ from app.core.database import engine, Base
 from app.core.config import settings, CORS_ORIGINS
 from app.routes import auth, accounts, transactions, budgets, goals, dashboard
 from app.models import User, Account, Transaction, Budget, Goal
+import os
 
 # Create tables
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+    print("✅ Database schema created/verified")
+except Exception as e:
+    print(f"⚠️ Database initialization error (this may be normal in serverless): {e}")
+    # Continue anyway - Vercel functions are stateless
 
 app = FastAPI(
     title="Financial Tracker API",
